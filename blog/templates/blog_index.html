@@ -2,10 +2,6 @@
 {% block content %}
 <div class="col-md-8 offset-md-2">
     <h1>Blog Index</h1>
-    <h4>Categories:</h4>
-    {% for category in categorys %}
-    <h3>{{ category.name }}</h3>
-    {% endfor %}
     <hr>
     {% for post in posts %}
     <h2><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
